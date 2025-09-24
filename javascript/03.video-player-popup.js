@@ -2,7 +2,7 @@ function loadCSS(filename) {
   const link = document.createElement('link');
   link.rel = 'stylesheet';
   link.type = 'text/css';
-  link.href = '/css/05.video-popup-player.css';
+  link.href = '../css/05.video-popup-player.css';
   document.head.appendChild(link);
 }
 
