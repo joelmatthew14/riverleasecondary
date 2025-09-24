@@ -20,8 +20,8 @@ function loadPartial(fromFile, selector, intoId) {
 }
 
 window.addEventListener("DOMContentLoaded", () => {
-  loadPartial("../html/02.header-sidebar.html", "#header-take", "header-get");
-  loadPartial("../html/02.header-sidebar.html", "#sidebar-take", "sidebar-get");
+  loadPartial("/html/02.header-sidebar.html", "#header-take", "header-get");
+  loadPartial("/html/02.header-sidebar.html", "#sidebar-take", "sidebar-get");
 });
 
 // this function is for the styles of the elements above
