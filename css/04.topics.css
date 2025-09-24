@@ -1,0 +1,139 @@
+.notes-container {
+  display: grid;
+  grid-auto-rows: auto; /* let rows size themselves to content */
+  gap: 10px; /* handles both row and column spacing */
+  height: auto; /* remove fixed 90% height */
+}
+
+.pdf-containers {
+  font-size: 14px;
+  font-weight: 550;
+  text-decoration: none;
+  height: auto;
+  width: 100%;
+  background-color: rgb(40, 40, 40);
+  border-radius: 7px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  /*align-content: space-evenly;
+  justify-content: space-evenly;*/
+}
+
+.topic-header {
+  height: 10%;
+  background-color: rgb(40, 40, 40);
+  margin: 10px 0 10px 0;
+  font-size: 40px;
+  font-weight: 550;
+  border-radius: 10px;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.pdf-containers div {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 0;
+  margin-top: 10px;
+  align-items: center;
+  justify-items: center;
+}
+
+.pdf-containers iframe {
+  border-radius: 7px;
+  margin: 0 20px 10px 20px;
+  aspect-ratio: 16/9;
+}
+
+.notes-container a,
+.notes-container a .pdf-containers,
+.notes-container a .pdf-containers div {
+  text-decoration: none;
+  color: white;
+  font-size: 40px;
+  font-weight: 500;
+  margin: 0;
+  padding: 10px 0 10px 0;
+}
+
+.notes-container a .pdf-containers div {
+  margin: 0;
+}
+
+.notes-container a :hover {
+  background-color: rgb(20, 20, 20);
+  cursor: pointer;
+}
+
+.notes-container a :active {
+  background-color: black;
+  cursor: pointer;
+}
+
+.choose-video-btn {
+  border: 0;
+  border-radius: 5px;
+  color: white;
+  background-color: rgb(60, 60, 60);
+  font-size: 17px;
+  margin: 15px 0 6px 0;
+  width: 50%;
+  padding: 3px 0 3px 0;
+}
+
+.choose-video-btn :hover {
+  background-color: rgb(20, 20, 20);
+  cursor: pointer;
+}
+
+.choose-video-btn :active {
+  background-color: black;
+  cursor: pointer;
+}
+
+@media (max-width: 450px) {
+  .notes-container {
+    grid-template-columns: 1fr;
+    height: 70%;
+  }
+}
+
+@media (min-width: 451px) and (max-width: 750px) {
+  .notes-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 751px) and (max-width: 999px) {
+  .notes-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 1000px) {
+  .notes-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 1000px) {
+  .pdf-containers {
+    font-size: 16px;
+  }
+  .choose-video-btn {
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 1500px) {
+  .pdf-containers {
+    font-size: 26px;
+  }
+  .choose-video-btn {
+    font-size: 17px;
+  }
+}
