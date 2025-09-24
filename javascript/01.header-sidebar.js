@@ -1,5 +1,6 @@
 // header-sidebar.js
-//create function
+
+// function to load parts of an HTML file into a page
 function loadPartial(fromFile, selector, intoId) {
   fetch(fromFile)
     .then(res => res.text())
@@ -19,48 +20,44 @@ function loadPartial(fromFile, selector, intoId) {
     });
 }
 
+// Detect if we are in root (index.html) or inside /html/
+const basePath = window.location.pathname.includes("/html/")
+  ? ".."   // inside /html/ → need to go up one folder
+  : ".";   // root → current folder
+
 window.addEventListener("DOMContentLoaded", () => {
-  loadPartial("/html/02.header-sidebar.html", "#header-take", "header-get");
-  loadPartial("/html/02.header-sidebar.html", "#sidebar-take", "sidebar-get");
+  loadPartial(`${basePath}/html/02.header-sidebar.html`, "#header-take", "header-get");
+  loadPartial(`${basePath}/html/02.header-sidebar.html`, "#sidebar-take", "sidebar-get");
+
+  loadCSS(`${basePath}/css/03.header-sidebar.css`);
+  loadViewPort();
 });
 
-// this function is for the styles of the elements above
-//create the function
+// function to load CSS dynamically
 function loadCSS(filename) {
-  //create a new <link> element
-  const link = document.createElement('link');
-
-  //set the attributes for the <link> element
-  link.rel = 'stylesheet';
-  link.type = 'text/css';
-  link.href = '../css/03.header-sidebar.css';
-
-  //append the <link> element to the <head> of the document
+  const link = document.createElement("link");
+  link.rel = "stylesheet";
+  link.type = "text/css";
+  link.href = filename;
   document.head.appendChild(link);
 }
 
-// call or start the function
-loadCSS('../css/03.header-sidebar.css');
-
+// function to load viewport meta
 function loadViewPort() {
-  const meta = document.createElement('meta');
-
+  const meta = document.createElement("meta");
   meta.name = "viewport";
   meta.content = "width=device-width, initial-scale=1.0";
-
   document.head.appendChild(meta);
 }
-loadViewPort();
 
+// sidebar toggle
 function openSidebar() {
-  
-  let x = document.getElementById('sidebar-take');
-  if (x.style.width === '200px') {
-    x.style.width = '0px';
-    document.body.style.paddingLeft = '20px'; // Remove padding when sidebar is closed
+  let x = document.getElementById("sidebar-take");
+  if (x.style.width === "200px") {
+    x.style.width = "0px";
+    document.body.style.paddingLeft = "20px"; 
   } else {
-    x.style.width = '200px';
-    document.body.style.paddingLeft = '200px'; // Add padding when sidebar is open
+    x.style.width = "200px";
+    document.body.style.paddingLeft = "200px"; 
   }
 }
-
