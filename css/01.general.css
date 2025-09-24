@@ -1,0 +1,27 @@
+p {
+  margin: 0 0;
+}
+
+body {
+  padding: 80px 20px 80px 20px;
+  background-color: rgb( 60, 60, 60);
+  font-family: Roboto, Arial;
+  color: white;
+  transition: padding-left 0.3s;
+}
+
+.addSidebar {
+  padding: 80px 20px 20px 220px;
+  background-color: rgb( 60, 60, 60);
+  font-family: Roboto, Arial;
+  color: white
+}
+
+html, body {
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
