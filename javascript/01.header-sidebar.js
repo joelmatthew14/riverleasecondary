@@ -20,8 +20,8 @@ function loadPartial(fromFile, selector, intoId) {
 }
 
 window.addEventListener("DOMContentLoaded", () => {
-  loadPartial("/riverleasecondary/html/02.header-sidebar.html", "#header-take", "header-get");
-  loadPartial("/riverleasecondary/html/02.header-sidebar.html", "#sidebar-take", "sidebar-get");
+  loadPartial("html/02.header-sidebar.html", "#header-take", "header-get");
+  loadPartial("html/02.header-sidebar.html", "#sidebar-take", "sidebar-get");
 });
 
 // this function is for the styles of the elements above
@@ -33,7 +33,7 @@ function loadCSS(filename) {
   //set the attributes for the <link> element
   link.rel = 'stylesheet';
   link.type = 'text/css';
-  link.href = '/riverleasecondary/css/03.header-sidebar.css';
+  link.href = 'css/03.header-sidebar.css';
 
   //append the <link> element to the <head> of the document
   document.head.appendChild(link);
