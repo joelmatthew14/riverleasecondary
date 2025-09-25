@@ -33,7 +33,7 @@ function loadCSS(filename) {
   //set the attributes for the <link> element
   link.rel = 'stylesheet';
   link.type = 'text/css';
-  link.href = filename;
+  link.href = '/riverleasecondary/css/03.header-sidebar.css';
 
   //append the <link> element to the <head> of the document
   document.head.appendChild(link);
