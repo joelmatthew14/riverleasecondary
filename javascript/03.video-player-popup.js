@@ -1,12 +1,12 @@
-function loadCSS(filename) {
+function loadCSS2(filename) {
   const link = document.createElement('link');
   link.rel = 'stylesheet';
   link.type = 'text/css';
-  link.href = '/riverleasecondary/css/05.video-popup-player.css';
+  link.href = filename;
   document.head.appendChild(link);
 }
 
-loadCSS('/riverleasecondary/css/05.video-popup-player.css');
+loadCSS2('/riverleasecondary/css/05.video-popup-player.css');
 
 
 const API_KEY = "AIzaSyBZTSsjn0glpatons6Tf_Sy5txuvJOPOWE"; // <-- Replace with your API key
