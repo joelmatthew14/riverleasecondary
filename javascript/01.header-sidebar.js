@@ -22,13 +22,13 @@ function loadPartial(fromFile, selector, intoId) {
 window.addEventListener("DOMContentLoaded", () => {
   loadPartial("/riverleasecondary/html/02.header-sidebar.html", "#header-take", "header-get");
   loadPartial("/riverleasecondary/html/02.header-sidebar.html", "#sidebar-take", "sidebar-get");
-  loadCSS('/riverleasecondary/css/03.header-sidebar.css');
+  loadCSSHeaderSidebar('/riverleasecondary/css/03.header-sidebar.css');
   loadViewPort();
 });
 
 // this function is for the styles of the elements above
 //create the function
-function loadCSS(filename) {
+function loadCSSHeaderSidebar(filename) {
   //create a new <link> element
   const link = document.createElement('link');
 

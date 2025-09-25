@@ -1,4 +1,4 @@
-function loadCSS2(filename) {
+function loadCSSVideoPopup(filename) {
   const link = document.createElement('link');
   link.rel = 'stylesheet';
   link.type = 'text/css';
@@ -6,7 +6,7 @@ function loadCSS2(filename) {
   document.head.appendChild(link);
 }
 
-loadCSS2('/riverleasecondary/css/05.video-popup-player.css');
+loadCSSVideoPopup('/riverleasecondary/css/05.video-popup-player.css');
 
 
 const API_KEY = "AIzaSyBZTSsjn0glpatons6Tf_Sy5txuvJOPOWE"; // <-- Replace with your API key

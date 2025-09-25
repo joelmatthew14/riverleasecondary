@@ -1,6 +1,6 @@
 // this function is for the styles for the topics webpages
 //create the function
-function loadCSS(filename) {
+function loadCSSTopic(filename) {
   //create a new <link> element
   const link = document.createElement('link');
 
@@ -14,7 +14,7 @@ function loadCSS(filename) {
 }
 
 // call or start the function
-loadCSS('../css/04.topics.css');
+loadCSSTopic('../css/04.topics.css');
 
 function loadTargetBlank() {
   // get all the anchor elements in the document

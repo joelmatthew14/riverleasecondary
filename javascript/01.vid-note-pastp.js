@@ -27,7 +27,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
 //this is for the styles for the elements above
 //create the function
-function loadCSS(filename) {
+function loadCSSVNP(filename) {
   //create a new <link> element
   const link = document.createElement('link');
 
@@ -41,4 +41,4 @@ function loadCSS(filename) {
 }
 
 //call the function
-loadCSS('../css/03.v-n-pp.css');
+loadCSSVNP('../css/03.v-n-pp.css');
